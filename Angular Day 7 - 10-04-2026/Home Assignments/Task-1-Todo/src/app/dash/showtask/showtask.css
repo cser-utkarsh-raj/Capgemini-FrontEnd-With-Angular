@@ -1,0 +1,85 @@
+h2 {
+  margin-bottom: 1rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tabs button {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background: #111;
+  color: #fff;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  transition: 0.2s;
+}
+
+.task:hover {
+  border-color: #aaa;
+}
+
+.title {
+  flex: 1;
+}
+
+.task.done .title {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.del {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #999;
+}
+
+.del:hover {
+  color: red;
+}
+
+.fin {
+  border: 1px solid #111;
+  background: transparent;
+  padding: 3px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.fin:hover {
+  background: #111;
+  color: #fff;
+}
+
+.check {
+  color: green;
+}
+
+.empty {
+  text-align: center;
+  color: #999;
+}

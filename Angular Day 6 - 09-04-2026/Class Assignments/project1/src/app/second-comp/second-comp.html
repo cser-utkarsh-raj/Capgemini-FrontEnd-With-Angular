@@ -1,0 +1,44 @@
+<p>second-comp works!</p>
+<!-- <h1 [ngClass]="{ classA: true, classB: false }">NG Class</h1> -->
+<h1 [ngClass]="{ classA: applyClass, classB: !applyClass }">NG Class</h1>
+<h1 [ngStyle]="{ 'background-color': applyClass ? 'lightblue' : 'lightgreen' }">NG Style</h1>
+
+<h1 *ngIf="applyClass">NG If - True</h1>
+<h1 *ngIf="!applyClass">NG If - False</h1>
+
+@if (applyClass) {
+  <p>Class If - True</p>
+} @else {
+  <p>Class If - False</p>
+}
+
+<button (click)="shouldApply()">Click me to change color</button>
+<h1>NG For</h1>
+<ul>
+  @for (item of arr; track $index) {
+    <li>{{ item }}</li>
+  } @empty {
+    <h1>nothin to display</h1>
+  }
+</ul>
+<ol>
+  <li *ngFor="let item of arr">{{ item }}</li>
+</ol>
+
+<h3>Table using *ngFor</h3>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Index</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let item of arr; let i = index">
+      <td>{{ i }}</td>
+      <td>{{ item }}</td>
+    </tr>
+  </tbody>
+</table>

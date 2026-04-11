@@ -1,0 +1,9 @@
+<p>first-comp works!</p>
+
+<app-child-comp
+  [nameGiven]="name"
+  [nameGiven2]="name2"
+  (output1)="receiveData($event)"
+></app-child-comp>
+
+<p>{{ receivedData }}</p>

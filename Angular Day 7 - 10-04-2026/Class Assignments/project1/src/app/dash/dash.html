@@ -1,0 +1,13 @@
+<h1>Dash works!</h1>
+<button (click)="navigatetohome()">Home</button>
+<section>
+  <div>
+    <a routerLink="/dashboard">Add User</a>
+    <br />
+    <a routerLink="/dashboard/displayuser">Display User</a>
+  </div>
+
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</section>

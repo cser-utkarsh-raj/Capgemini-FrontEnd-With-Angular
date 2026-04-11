@@ -1,0 +1,25 @@
+<h2>Your Tasks</h2>
+
+<div class="tabs">
+  <button [class.active]="activeTab === 'pending'" (click)="activeTab = 'pending'">Pending</button>
+  <button [class.active]="activeTab === 'finished'" (click)="activeTab = 'finished'">
+    Finished
+  </button>
+  <button [class.active]="activeTab === 'all'" (click)="activeTab = 'all'">All</button>
+</div>
+
+<div class="list">
+  <p *ngIf="tasks.length === 0" class="empty">No tasks available</p>
+
+  <div class="task" *ngFor="let task of tasks" [class.done]="task.status === 'finished'">
+    <button class="del" (click)="delete(task.id)">✕</button>
+
+    <span class="title">{{ task.title }}</span>
+
+    <button class="fin" *ngIf="task.status === 'pending'" (click)="markFinished(task.id)">
+      Done
+    </button>
+
+    <span class="check" *ngIf="task.status === 'finished'">✓</span>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+:host {
+  display: block;
+  font-family: system-ui, sans-serif;
+  min-height: 100vh;
+  background: #f5f6fa;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 60px;
+  background: #111;
+  color: #fff;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+}
+
+.links a {
+  text-decoration: none;
+  color: #bbb;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.links a:hover {
+  background: #333;
+  color: #fff;
+}
+
+.links a.active {
+  background: #fff;
+  color: #111;
+}
+
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}

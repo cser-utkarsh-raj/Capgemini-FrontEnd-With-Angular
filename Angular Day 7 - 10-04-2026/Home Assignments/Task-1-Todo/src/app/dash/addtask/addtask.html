@@ -1,0 +1,12 @@
+<h2>Add Task</h2>
+
+<div class="card">
+  <input
+    type="text"
+    placeholder="Enter your task..."
+    [(ngModel)]="taskTitle"
+    (keydown.enter)="addTask()"
+  />
+
+  <button (click)="addTask()" [disabled]="!taskTitle.trim()">Add Task</button>
+</div>

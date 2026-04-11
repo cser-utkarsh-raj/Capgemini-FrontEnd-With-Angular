@@ -1,0 +1,11 @@
+<button (click)="showList()">List</button>
+<button (click)="showTable()">Table</button>
+<button (click)="showCard()">Card</button>
+
+<hr />
+
+<app-list-view *ngIf="selectedView === 'list'" [students]="students"> </app-list-view>
+
+<app-table-view *ngIf="selectedView === 'table'" [students]="students"> </app-table-view>
+
+<app-card-view *ngIf="selectedView === 'card'" [students]="students"> </app-card-view>

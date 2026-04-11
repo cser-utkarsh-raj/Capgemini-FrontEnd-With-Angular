@@ -1,0 +1,29 @@
+<h1>{{ title() }}</h1>
+
+<button (click)="next()">Click Me</button>
+
+<h3>Using ngSwitch</h3>
+
+<div [ngSwitch]="value">
+  <p *ngSwitchCase="1">Switch 1</p>
+  <p *ngSwitchCase="2">Switch 2</p>
+  <p *ngSwitchCase="3">Switch 3</p>
+  <p *ngSwitchDefault>Default</p>
+</div>
+
+<h3>Using @Switch</h3>
+
+@switch (value) {
+  @case (1) {
+    <p>Switch 1</p>
+  }
+  @case (2) {
+    <p>Switch 2</p>
+  }
+  @case (3) {
+    <p>Switch 3</p>
+  }
+  @default {
+    <p>Default</p>
+  }
+}

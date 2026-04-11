@@ -1,0 +1,21 @@
+<h2>Add User Works!</h2>
+
+<form (ngSubmit)="handleSubmit()">
+  <fieldset>
+    <legend>Add a new User</legend>
+
+    <div>
+      <input type="text" placeholder="name" [(ngModel)]="userData.name" name="name" />
+    </div>
+
+    <div>
+      <input type="text" placeholder="role" [(ngModel)]="userData.role" name="role" />
+    </div>
+
+    <div>
+      <input type="text" placeholder="image url" [(ngModel)]="userData.image" name="image" />
+    </div>
+
+    <button type="submit">Submit</button>
+  </fieldset>
+</form>
