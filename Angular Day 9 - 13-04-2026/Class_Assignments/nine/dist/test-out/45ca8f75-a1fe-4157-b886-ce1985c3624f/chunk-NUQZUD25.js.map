@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/services/counter.ts"],
+  "sourcesContent": ["import { Injectable } from '@angular/core';\n\n@Injectable({\n  providedIn: 'root',\n})\nexport class Counter {\n  count:number=0;\n  incrementCount(){\n    this.count+=1;\n  }\n  decrementCount(){\n    this.count-=1;\n  }\n  resetCount(){\n    this.count=0\n  }\n}\n"],
+  "mappings": ";;;;;;;;;AAAA,IAKa;AALb;;;;;AAKM,IAAO,UAAP,MAAO,SAAO;MAClB,QAAa;MACb,iBAAc;AACZ,aAAK,SAAO;MACd;MACA,iBAAc;AACZ,aAAK,SAAO;MACd;MACA,aAAU;AACR,aAAK,QAAM;MACb;;yCAVW,UAAO;MAAA;gFAAP,UAAO,SAAP,SAAO,WAAA,YAFN,OAAM,CAAA;;;0EAEP,SAAO,CAAA;cAHnB;eAAW;UACV,YAAY;SACb;;;;;",
+  "names": []
+}

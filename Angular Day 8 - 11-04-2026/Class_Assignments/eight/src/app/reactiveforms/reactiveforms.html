@@ -1,0 +1,56 @@
+<p>reactiveforms works!</p>
+<form (ngSubmit)="handleSubmit()" [formGroup]="loginForm">
+    <fieldset>
+        <legend>
+           Reactive Forms
+        </legend>
+         
+         <div>
+            <input type="text" placeholder="Name" formControlName="email">
+            @if(loginForm.controls.email.errors?.['email']){
+                <p>the email must be in correct format</p>
+            }
+         </div>
+            
+            <div>
+                <input type="text" placeholder="Password" formControlName="password">
+                @if(loginForm.controls.password.errors?.['minlength']){
+                    <p>the minimum length should be 8 characters</p>
+                }
+            </div>
+            <div>
+                <input type="text" placeholder="Confirm Password" formControlName="ConfirmPassword">
+                @if(loginForm.controls.ConfirmPassword.value !== loginForm.controls.password.value && loginForm.controls.ConfirmPassword.dirty){
+                    <p>Passwords do not match</p>
+                }
+            </div>
+            <div>
+                <select name="currency" id="">
+                    <option value="inr">INR</option>
+                    <option value="usd">USD</option>
+                    <option value="eur">EUR</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Male">Male<input type="radio" name="gender" id="male" value="male" formControlName="gender"></label>
+                <label for="Female">Female<input type="radio" name="gender" id="female" value="female" formControlName="gender"></label>
+                <label for="Other">Other<input type="radio" name="gender" id="other" value="other" formControlName="gender"></label>
+            </div>
+
+            <div>
+                <label for="tandc">
+                    <input type="checkbox" id="tandc" formControlName="tandc">
+                    I agree to the terms and conditions
+                </label>
+            </div>       
+            <div>
+                <label for="cb1">Java<input type="checkbox" id="cb1" value="java" (change)="handleCheckBoxes($event)"></label>
+                <label for="cb2">Python<input type="checkbox" id="cb2" value="python" (change)="handleCheckBoxes($event)"></label>
+                <label for="cb3">JavaScript<input type="checkbox" id="cb3" value="javascript" (change)="handleCheckBoxes($event)"></label>
+                <label for="cb4">C++<input type="checkbox" id="cb4" value="c++" (change)="handleCheckBoxes($event)"></label>
+            </div>
+
+            <button (click)="handleSubmit()">Submit</button>
+    </fieldset>
+</form>
